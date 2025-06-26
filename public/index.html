@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Book Saver</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="opening" style="display: none">
+      <img alt="book-opening" src="pics/books.gif" />
+    </div>
+    <div id="home">
+      <video id="books" autoplay loop muted>
+        <source src="vids/books.mp4" />
+      </video>
+      <div id="home-container">
+        <div id="home-container-title">Users</div>
+        <div id="home-click">
+          <div class="home-buttons" id="add-user" onclick="AddUser()">Add</div>
+          <div class="home-buttons" id="view-users" onclick="ViewUsers()">
+            View
+          </div>
+          <div class="home-buttons" id="delete-user" onclick="DeleteUser()">
+            Delete
+          </div>
+        </div>
+      </div>
+      <div id="add-container">
+        <div id="user-input">
+          <input
+            title="username"
+            type="text"
+            autocomplete="new-password"
+            id="username-input"
+            minlength="5"
+            placeholder="Enter username"
+          />
+          <input
+            title="password"
+            type="password"
+            autocomplete="new-password"
+            id="password-input"
+            minlength="5"
+            placeholder="Enter password"
+          />
+        </div>
+        <div id="user-input-2">
+          <div id="add-to-home" onclick="AddtoHome()">Back</div>
+          <div id="create-user">Create</div>
+        </div>
+      </div>
+      <div id="view-container">
+        <div id="view-title">Users</div>
+        <div id="user-list"></div>
+        <div id="enter-pass"></div>
+        <div id="view-to-home" onclick="ViewtoHome()">Back</div>
+      </div>
+      <div id="delete-container">
+        <div id="delete-title">Users</div>
+        <div id="drop-list"></div>
+        <div id="admin-pass"></div>
+        <div id="delete-to-home" onclick="DeletetoHome()">Back</div>
+      </div>
+      <div id="user-container">
+        <div id="upper-container">
+          <div id="upper-left-container">
+            <div id="user-name"></div>
+            <div id="user-buttons">
+              <div id="add-button" onclick="AddContent()">Add</div>
+              <div id="update-button" onclick="UpdateContent()">Update</div>
+              <div id="delete-button" onclick="DeleteContent()">Delete</div>
+            </div>
+          </div>
+          <div id="upper-right-container">
+            <div id="additem-container">
+              <div id="additem-1">
+                <div id="item-title">Title</div>
+                <div id="item-title-input">
+                  <input
+                    title="Title"
+                    type="text"
+                    autocomplete="new-password"
+                    id="titlename-input"
+                    minlength="1"
+                    placeholder="Required"
+                  />
+                </div>
+                <div id="item-author">Author</div>
+                <div id="item-author-input">
+                  <input
+                    title="Author's Name"
+                    type="text"
+                    autocomplete="new-password"
+                    id="authorname-input"
+                    minlength="1"
+                    placeholder="Required"
+                  />
+                </div>
+              </div>
+              <div id="additem-2">
+                <div id="item-status">Status</div>
+                <div id="item-status-input">
+                  <select id="status-input">
+                    <option value="" selected disabled>Required</option>
+                    <option value="Finished">Finished</option>
+                    <option value="On-Ooing">On-Going</option>
+                    <option value="Drop">Drop</option>
+                  </select>
+                </div>
+                <div id="item-chapter">Chapter/Page</div>
+                <div id="item-chapter-input">
+                  <input
+                    title="Chapter #"
+                    type="number"
+                    autocomplete="new-password"
+                    id="chapter-input"
+                    minlength="1"
+                    min="0"
+                    placeholder="Required"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                  />
+                </div>
+              </div>
+              <div id="additem-3">
+                <div id="item-image">Cover</div>
+                <input type="hidden" id="CurrentUser" value="Mark">
+                <input type="hidden" id="CurrentUserPass" value="12345">
+                <input type="hidden" id="ContentID" value="Book001">
+                <input type="file" id="image-input" accept="image/*" title="Book Cover">
+                <div id="item-submit">Submit</div>
+              </div>
+              <div id="additem-4">
+                <div id="item-image-preview">
+                  <div id="image-preview-text">Required</div>
+                  <img id="image-preview" title="Book Cover">
+                </div>
+              </div>
+              <div id="additem-5">
+                <div id="item-clear" onclick="ClearItemInputs()">C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="lower-container">
+          <div id="book-list"></div>
+          <div id="logout" onclick="Logout()">Logout</div>
+        </div>
+      </div>
+    </div>
+    <div id="owner">MWB</div>
+    <script src="main.js"></script>
+  </body>
+</html>

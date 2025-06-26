@@ -1,0 +1,11 @@
+{
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.includeLanguages": {
+        "javascript": "html",      // in case you're using `.js`
+        "plaintext": "html"        // if your file is not recognized as HTML
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.port": 5501
+}
